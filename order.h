@@ -1,7 +1,9 @@
-void initOrders();
+int initOrders();
+void addNewOrder(int buttonType, int etasje);
+void clearAllOrders();
 
-struct etasjeFra{
+struct bestilling{
   int etasje;
   int retning;
-  struct etasjeFra* next;
+  struct bestilling* next;
 };

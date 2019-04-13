@@ -1,6 +1,8 @@
 #include "elev.h"
 #include "controll.h"
+#include "order.h"
 #include <stdio.h>
+#include <stdlib.h>
 
 
 int main() {
@@ -9,11 +11,12 @@ int main() {
         printf("Unable to initialize elevator hardware!\n");
         return 1;
     }
-
-    printf("Press STOP button to stop elevator and exit program.\n");
-    /*
+	printf("Press STOP button to stop elevator and exit program.\n");
+		/*
     elev_set_motor_direction(DIRN_UP);
-    
+
+
+
     while (1) {
         //Initialize, stop at first floor
         if (elev_get_floor_sensor_signal() == N_FLOORS - 1) {
@@ -30,6 +33,5 @@ int main() {
         }
     }*/
     controll();
-
     return 0;
 }
