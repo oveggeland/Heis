@@ -1,19 +1,21 @@
 #include "door.h"
 #include "elev.h"
-#include "logic.h"
+#include "controll.h"
 #include <stdio.h>
-#include <stdlib.h>
+#include <time.h>
 
-void holdDoor(double time){
-  for(int c = 1; c <= time*350000000; c++)
-  {
-	  /*
-	if (elev_get_stop_signal()){
-		stopSignal();
-		//Her kan vi eventuelt legge inn break; istedenfor holdDoor(3);
-		//Skjønte ikke om vi skulle avbryte stoppen eller begynne den på nytt ved nytt klikk
-	}*/
-  }
+void holdDoor(){
+
+  time_t rawtime;
+  struct tm* timeinfo;
+  
+  time ( &rawtime );
+  timeinfo = localtime ( &rawtime );
+  printf ("her er tida: %s", asctime (timeinfo));
+  
+  int tall = (int) (asctime(timeinfo))[6];
+  if (tall > )
+
 }
 
 void openDoor(){

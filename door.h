@@ -1,3 +1,3 @@
-void holdDoor(double time);
+void holdDoor();
 void openDoor();
 void closeDoor();
